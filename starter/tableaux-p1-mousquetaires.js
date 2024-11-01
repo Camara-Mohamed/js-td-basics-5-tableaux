@@ -10,3 +10,26 @@ TABLEAUX - PRÉPA 1 : Les trois mousquetaires
 6. Utilisez une boucle 'for-of' pour parcourir le tableau et affichez le nom de chaque mousquetaire.
    Précédez le texte "Le pauvre Aramis est mort…".
 */
+const mousquetaires = ["Athos", "Porthos", "Aramis"];
+
+for (const mousquetaire of mousquetaires) {
+    console.table(`Voici les Trois Mousquetaires : ${mousquetaire}`);
+}
+
+mousquetaires.push("Artagnan");
+
+console.log("Ils sont quatre à présent :");
+mousquetaires.forEach(function (mousquetaire) {
+    console.table(mousquetaire);
+});
+
+const index = mousquetaires.indexOf("Aramis");
+if (index !== -1) {
+    mousquetaires.splice(index, 1);
+}
+
+console.log("Le pauvre Aramis est mort…");
+for (const mousquetaire of mousquetaires) {
+    console.table(mousquetaire);
+}
+

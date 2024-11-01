@@ -15,8 +15,18 @@ Version alternative (avec BONUS) :
 4. Affichez le message final : "… + … + … = …".
 */
 
+const nombres = [11, 3, 7, 2, 9, 10];
 
+console.table(`Voici mon tableau de nombres : ${nombres}`);
 
+let sommeForEach = 0;
+nombres.forEach(function (nombre) {
+    sommeForEach += nombre;
+});
+console.table(`Voici mon tableau de nombres : ${sommeForEach}`);
 
-
-
+let sommeForOf = 0;
+for (const nombre of nombres) {
+    sommeForOf += nombre;
+}
+console.table(`Voici mon tableau de nombres : ${sommeForOf}`);
